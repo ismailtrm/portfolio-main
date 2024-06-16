@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three.js Donut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="donut-container"></div>
+    <div id="tabs">
+        <button class="tab active" data-tab="hakkinda">Hakkında</button>
+        <button class="tab" data-tab="projeler">Projeler</button>
+    </div>
+    <div id="tab-content">
+        <div id="hakkinda" class="tab-pane active">
+            <h2>Hakkında</h2>
+            <p>Bu projede Three.js ile bir donut animasyonu oluşturduk...</p>
+        </div>
+        <div id="projeler" class="tab-pane">
+            <h2>Projeler</h2>
+            <p>Diğer projelerim...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

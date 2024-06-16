@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#donut-container {
+    height: 50vh; /* Donut için ekranın yarısını ayır */
+}
+
+#tabs {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.tab {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.tab.active {
+    background-color: #ccc;
+}
+
+#tab-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
