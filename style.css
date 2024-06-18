@@ -5,30 +5,44 @@ body {
 }
 
 #donut-container {
-    height: 25vh; /* Donut için ekranın yarısını ayır */
+    width: 100%;
 }
 
 #tabs {
+    display: flex;
+    justify-content: left; /* Sekmeleri yatayda ortala */
     background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
 }
 
 .tab {
-    background-color: #ddd;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
+    color: white;          /* Yazı rengi beyaz */
+    background-color: #333; /* Arka plan rengi koyu gri */
+    font-size: 16px;       /* Yazı boyutu 16 piksel */
+    font-family: Arial, sans-serif; /* Yazı tipi Arial */
+    padding: 10px 20px;   /* Yazının etrafındaki boşluk */
+    border: none;          /* Kenarlık yok */
+    cursor: pointer;       /* İmleç işaretçiye dönüşür */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-.tab.active {
-    background-color: #ccc;
-}
+  
+  /* Aktif buton için stil */
+  .tab.active {
+    background-color: #010015; /* Aktif butonun arka plan rengi daha açık gri */
+  }
 
 #tab-content {
     padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 260px); /* Header ve padding'i çıkararak yüksekliği hesapla */
 }
+
+h1 {
+    color: rgb(255, 255, 255); /* h1 başlıklarını mavi yapar */
+  }
 
 .tab-pane {
     display: none;

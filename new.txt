@@ -1,0 +1,27 @@
+
+
+// Donut Geometrisi, Malzeme ve Nesne Oluşturma
+const geometry = new THREE.TorusGeometry(10, 4, 16, 100);
+
+const textureLoader = new THREE.TextureLoader();
+const donutTexture = textureLoader.load('coast_sand_rocks_02_diff_4k.jpg'); // Örnek texture dosyası
+const material = new THREE.MeshBasicMaterial({ map: donutTexture }); // Texture'ı malzemeye uygula
+material.metalness = 10;
+material.roughness = 0.5;
+const torus = new THREE.Mesh(geometry, material);
+scene.add(torus);
+
+// Kamera Pozisyonu
+camera.position.z = 25;
+
+material.wireframe = false;
+
+// Animasyon Döngüsü
+function animate() {
+    requestAnimationFrame(animate);
+    torus.rotation.x += 0.01;
+    torus.rotation.y += 0.01;
+    renderer.render(scene, camera);
+    renderer.setSize(window.innerWidth, 300); 
+}
+animate();

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Three.js Donut</title>
+    <title>Three.js GLTF Model</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,8 @@
     <div id="tab-content">
         <div id="hakkinda" class="tab-pane active">
             <h2>Hakkında</h2>
-            <p>Bu projede Three.js ile bir donut animasyonu oluşturduk...</p>
+            
+            sss<p>Bu projede Three.js ile bir GLTF modelini shader kullanarak görüntülüyoruz.</p>
         </div>
         <div id="projeler" class="tab-pane">
             <h2>Projeler</h2>
@@ -21,7 +22,16 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/GLTFLoader.js"></script>
     <script src="script.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
 </body>
 </html>
